@@ -139,6 +139,9 @@ if __name__ == "__main__":
 	print(totalBest)
 	print(totalR_Best)
 
+
+	
+
 	x = []
 	y = []
 	for i in range(len(totalR_Best)):
