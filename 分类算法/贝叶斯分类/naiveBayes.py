@@ -77,13 +77,9 @@ def calAttribute(dataSet, labels, labels_full):
 
 	return resultTotal, resultGood
 
-
-
 def calTotalNum(dataSet):
 	totalNum = len(dataSet)
 	return totalNum
-
-
 
 def calGoodNum(dataSet):
 	labelGood = 0
@@ -92,14 +88,11 @@ def calGoodNum(dataSet):
 			labelGood += 1
 	return labelGood
 
-
 def calClassPriorProbability(totalNum, labelGood):
 	# 计算类先验概率,使用Laplace修正，防止有未出现的属性让概率乘起来为0
 	P_good = (labelGood + 1) / (totalNum + 2)
 	P_bad = (totalNum - labelGood + 1) / (totalNum +2)
 	return P_good, P_bad
-
-
 
 def calAttrConditionalProbability(labels, resultTotal, resultGood):
 	# 计算属性的条件概率
@@ -134,7 +127,6 @@ def naiveBayesDecision(data):
 		print("Good, enjoy it!")
 	else:
 		print("emm，this is a bad watermelon")
-
 
 if __name__ == '__main__':
 	naiveBayesDecision(None)
