@@ -1,4 +1,7 @@
+<script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+
 # 基于模型的聚类方法
+
 ## 高斯混合聚类
 ### 推导过程
 * 对于n维样本空间X中的随机向量想，若x服从高斯分布，则其概率密度函数为
@@ -16,6 +19,7 @@ $$
   $$
 
 
+
 * 分类的时候若把D分为k个簇，$C=\{C_1,C_2,...,C_k\}$，每个样本$x_j$的簇标记根据下式来确定
   $$
   \lambda_j = argmax_{i\in\{1,2,...,k\}}\gamma_{ji}
@@ -26,6 +30,7 @@ $$
   \mu_i = \frac{\sum^m_{i=1}\gamma_{ji}x_j}{\sum^m_{j=1}\gamma_{ji}}\\
   \Sigma_i = \frac{\sum^m_{j=1}\gamma_{ji}(x_j-\mu_i)(x_j-\mu_i)^T}{\sum^m_{j=1}\gamma_{ji}}
   $$
+
 
 
 而对于混合系数$\alpha_i$来说,还需要考虑约束，需要用Lagrange乘子法：
